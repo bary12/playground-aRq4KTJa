@@ -30,8 +30,11 @@ public class ShopTest {
 
         Shop.shop(50);
         Assert.assertTrue("בננה לא נקנתה כאשר money = 50", outContent.toString().contains("banana"));
+        TechIOUtil.msg("debug", "50");
+
         Shop.shop(10);
         Assert.assertEquals("הודפסה הודעה למסך, למרות שאין ללקוח מספיק כסף", "", outContent.toString());
+        TechIOUtil.msg("debug", "10");
         TechIOUtil.success(true);
 
     }
