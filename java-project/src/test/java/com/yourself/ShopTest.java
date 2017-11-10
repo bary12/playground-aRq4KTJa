@@ -23,6 +23,7 @@ public class ShopTest {
 
     @Test
     public void test(){
+        TechIOUtil.msg("ניסיון", "Try");
         try {
             assert50();
             assert10();
