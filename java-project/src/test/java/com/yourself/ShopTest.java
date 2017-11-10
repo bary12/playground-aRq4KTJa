@@ -26,8 +26,8 @@ public class ShopTest {
     @Test
     public void test(){
         try {
-            assert10();
-            assert50();
+            assertNotEnough();
+            assertEnough();
             TechIOUtil.success(true);
         } catch (AssertionError ae) {
             TechIOUtil.success(false);
@@ -36,20 +36,20 @@ public class ShopTest {
 
     }
 
-    private void assert50() throws AssertionError {
+    private void assertEnough() throws AssertionError {
         setUpStreams();
-        Shop.shop(50);
+        Shop.shop(25);
         String content = outContent.toString();
         cleanUpStreams();
-        Assert.assertTrue("בננה לא נקנתה כאשר money = 50", content.contains("banana"));
+        Assert.assertTrue("הלקוח לא הצליח לקנות את הבננה, למרות שיש לו מספיק כסף (25)", content.contains("pizza"));
     }
 
-    private void assert10() throws AssertionError {
+    private void assertNotEnough() throws AssertionError {
         setUpStreams();
-        Shop.shop(10);
+        Shop.shop(15);
         String content = outContent.toString();
         cleanUpStreams();
-        Assert.assertFalse("הודפסה המילה banana למסך, למרות שאין ללקוח מספיק כסף", content.contains("banana"));
+        Assert.assertFalse(" הלקוח הצליח לקנות את הפיצה, למרות שאין לו מספיק כסף (15)", content.contains("pizza"));
     }
 
 }
