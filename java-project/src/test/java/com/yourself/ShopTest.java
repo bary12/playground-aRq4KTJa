@@ -24,7 +24,7 @@ public class ShopTest {
     @Test
     public void test(){
         try {
-            assert50();
+            assert50(); 
             assert10();
             TechIOUtil.success(true);
         } catch (AssertionError ae) {
