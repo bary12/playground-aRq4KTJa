@@ -26,16 +26,28 @@ public class ShopTest {
     }
 
     @Test
-    public void test(){
+    public void test50(){
+        try {
+            Shop.shop(50);
+            Assert.assertTrue("בננה לא נקנתה כאשר money = 50", outContent.toString().contains("banana"));
+            TechIOUtil.success(true);
+        } catch (AssertionError ae) {
+            TechIOUtil.msg("שגיאה!", ae.getMessage());
+            TechIOUtil.success(false);
+        }
 
-        Shop.shop(50);
-        Assert.assertTrue("בננה לא נקנתה כאשר money = 50", outContent.toString().contains("banana"));
-        TechIOUtil.msg("debug", "50");
+    }
 
-        Shop.shop(10);
-        Assert.assertEquals("הודפסה הודעה למסך, למרות שאין ללקוח מספיק כסף", "", outContent.toString());
-        TechIOUtil.msg("debug", "10");
-        TechIOUtil.success(true);
+    @Test
+    public void test10(){
+        try {
+            Shop.shop(10);
+            Assert.assertFalse("הודפסה המילה banana למסך, למרות שאין ללקוח מספיק כסף", outContent.toString().contains("banana"));
+            TechIOUtil.success(true);
+        } catch (AssertionError ae) {
+            TechIOUtil.msg("שגיאה!", ae.getMessage());
+            TechIOUtil.success(false);
+        }
 
     }
 }
