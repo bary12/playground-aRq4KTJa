@@ -10,6 +10,8 @@ import java.io.PrintStream;
 public class ShopTest {
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
     private final ByteArrayOutputStream errContent = new ByteArrayOutputStream();
+    private final PrintStream stdout = System.out;
+    private final PrintStream stderr = System.err;
 
     private void setUpStreams() {
         System.setOut(new PrintStream(outContent));
@@ -17,8 +19,8 @@ public class ShopTest {
     }
 
     private void cleanUpStreams() {
-        System.setOut(System.out);
-        System.setErr(System.err);
+        System.setOut(stdout);
+        System.setErr(stderr);
     }
 
     @Test
