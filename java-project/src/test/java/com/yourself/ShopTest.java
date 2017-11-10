@@ -23,10 +23,11 @@ public class ShopTest {
 
     @Test
     public void test(){
-        TechIOUtil.msg("ניסיון", "Try");
         try {
             assert50();
+            TechIOUtil.msg("info", "money = 50 passed");
             assert10();
+            TechIOUtil.msg("info", "money = 10 passed");
             TechIOUtil.success(true);
         } catch (AssertionError ae) {
             TechIOUtil.success(false);
