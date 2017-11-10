@@ -26,10 +26,8 @@ public class ShopTest {
     @Test
     public void test(){
         try {
-            assert50();
-            TechIOUtil.msg("info", "money = 50 passed");
             assert10();
-            TechIOUtil.msg("info", "money = 10 passed");
+            assert50();
             TechIOUtil.success(true);
         } catch (AssertionError ae) {
             TechIOUtil.success(false);
