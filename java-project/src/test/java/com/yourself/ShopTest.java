@@ -4,6 +4,7 @@ import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+import com.yourself.TechIOUtil;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
@@ -26,9 +27,15 @@ public class ShopTest {
 
     @Test
     public void test(){
-        Shop.shop(50);
-        Assert.assertTrue("לא הודפסה הודעה למסך", outContent.toString().contains("banana"));
-        Shop.shop(10);
-        Assert.assertEquals("הודפסה הודעה למסך, למרות שאין ללקוח מספיק כסף", "", outContent.toString());
+        try {
+            Shop.shop(50);
+            Assert.assertTrue("בננה לא נקנתה כאשר money = 50", outContent.toString().contains("banana"));
+            Shop.shop(10);
+            Assert.assertEquals("הודפסה הודעה למסך, למרות שאין ללקוח מספיק כסף", "", outContent.toString());
+            TechIOUtil.success(true);
+        } catch (AssertionError ae) {
+            TechIOUtil.msg("Oops! 🐞", ae.getMessage());
+            TechIOUtil.success(false);
+        }
     }
 }
