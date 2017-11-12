@@ -24,7 +24,7 @@ public class BetterShopTest {
         BetterShop.shop(25);
         String content = Util.outContent.toString();
         Util.cleanUpStreams();
-        Assert.assertTrue("ההודעה You can buy pizza לא הודפסה למסך, למרות שיש ללקוח מספיק כסף", content.contains("can buy pizza"));
+        Assert.assertTrue("ההודעה \nYou can buy pizza \nלא הודפסה למסך, למרות שיש ללקוח מספיק כסף", content.contains("can buy pizza"));
     }
 
     private void assertNotEnough() throws AssertionError {
@@ -32,7 +32,7 @@ public class BetterShopTest {
         BetterShop.shop(15);
         String content = Util.outContent.toString();
         Util.cleanUpStreams();
-        Assert.assertTrue("ההודעה You don't have enough money לא הודפסה למסך, למרות שאין ללקוח מספיק כסף", content.contains("pizza"));
+        Assert.assertTrue("ההודעה \nYou don't have enough money\n לא הודפסה למסך, למרות שאין ללקוח מספיק כסף", content.contains("t have enough money"));
     }
 
 }
