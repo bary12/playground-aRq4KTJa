@@ -3,7 +3,6 @@ package com.yourself;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
-import com.yourself.TechIOUtil;
 
 import org.junit.Assert;
 import org.junit.Test;
@@ -15,26 +14,26 @@ public class UniverseTest {
 		try {
 			Assert.assertEquals("Running Universe.countAllStars(2, 3)...", 5, Universe.countAllStars(2, 3));
 			Assert.assertEquals("Running Universe.countAllStars(9, -3)...", 6, Universe.countAllStars(9, -3));
-			TechIOUtil.success(true);
+			Util.success(true);
 
 			if (existsInFile("Arrays.stream(galaxies).sum()", new File("./src/main/java/com/yourself/Universe.java"))) {
-				TechIOUtil.msg("My personal Yoda, you are. 🙏", "* ● ¸ .　¸. :° ☾ ° 　¸. ● ¸ .　　¸.　:. • ");
-				TechIOUtil.msg("My personal Yoda, you are. 🙏", "           　★ °  ☆ ¸. ¸ 　★　 :.　 .   ");
-				TechIOUtil.msg("My personal Yoda, you are. 🙏", "__.-._     ° . .　　　　.　☾ ° 　. *   ¸ .");
-				TechIOUtil.msg("My personal Yoda, you are. 🙏", "'-._\\7'      .　　° ☾  ° 　¸.☆  ● .　　　");
-				TechIOUtil.msg("My personal Yoda, you are. 🙏", " /'.-c    　   * ●  ¸.　　°     ° 　¸.    ");
-				TechIOUtil.msg("My personal Yoda, you are. 🙏", " |  /T      　　°     ° 　¸.     ¸ .　　  ");
-				TechIOUtil.msg("My personal Yoda, you are. 🙏", "_)_/LI");
+				Util.msg("My personal Yoda, you are. 🙏", "* ● ¸ .　¸. :° ☾ ° 　¸. ● ¸ .　　¸.　:. • ");
+				Util.msg("My personal Yoda, you are. 🙏", "           　★ °  ☆ ¸. ¸ 　★　 :.　 .   ");
+				Util.msg("My personal Yoda, you are. 🙏", "__.-._     ° . .　　　　.　☾ ° 　. *   ¸ .");
+				Util.msg("My personal Yoda, you are. 🙏", "'-._\\7'      .　　° ☾  ° 　¸.☆  ● .　　　");
+				Util.msg("My personal Yoda, you are. 🙏", " /'.-c    　   * ●  ¸.　　°     ° 　¸.    ");
+				Util.msg("My personal Yoda, you are. 🙏", " |  /T      　　°     ° 　¸.     ¸ .　　  ");
+				Util.msg("My personal Yoda, you are. 🙏", "_)_/LI");
 			} else {
-				TechIOUtil.msg("Kudos 🌟", "Did you know that since Java8 is out you can use streams? Try it!");
-				TechIOUtil.msg("Kudos 🌟", "");
-				TechIOUtil.msg("Kudos 🌟", "int[] galaxies = {37, 3, 2};");
-				TechIOUtil.msg("Kudos 🌟", "int totalStars = Arrays.stream(galaxies).sum(); // 42");
+				Util.msg("Kudos 🌟", "Did you know that since Java8 is out you can use streams? Try it!");
+				Util.msg("Kudos 🌟", "");
+				Util.msg("Kudos 🌟", "int[] galaxies = {37, 3, 2};");
+				Util.msg("Kudos 🌟", "int totalStars = Arrays.stream(galaxies).sum(); // 42");
 			}
 		} catch (AssertionError ae) {
-			TechIOUtil.success(false);
-			TechIOUtil.msg("Oops! 🐞", ae.getMessage());
-			TechIOUtil.msg("Hint 💡", "Did you properly accumulate all stars into 'totalStars'? 🤔");
+			Util.success(false);
+			Util.msg("Oops! 🐞", ae.getMessage());
+			Util.msg("Hint 💡", "Did you properly accumulate all stars into 'totalStars'? 🤔");
 		}
 	}
 

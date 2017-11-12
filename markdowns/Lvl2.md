@@ -5,7 +5,7 @@
 אם יש ללקוח יותר מ-20, הדפיסו למסך
 
 ```java
-"You can buy a pizza"
+"You can buy pizza"
 ```
 
 אם אין לו מספיק, הדפיסו 

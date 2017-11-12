@@ -1,10 +1,12 @@
 // { autofold
 package com.yourself;
-public class Shop {
+
+public class BetterShop {
 public static void shop(int money) {
 // }
-System.out.println("You have " + money + "$");
-if(true){
+if(true) {
+
+} else {
 
 }
 // { autofold
