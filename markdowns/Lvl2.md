@@ -14,3 +14,5 @@
 ```java
 "You don't have enough money"
 ```
+
+@[חנות משופרת]({"stubs": ["src/main/java/com/yourself/BetterShop.java"], "command": "com.yourself.BetterShopTest#test"})
