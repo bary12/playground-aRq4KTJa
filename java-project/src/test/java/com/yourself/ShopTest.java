@@ -24,10 +24,7 @@ public class ShopTest {
     }
 
     private void assertNotEnough() throws AssertionError {
-        Util.setUpStreams();
-        Shop.shop(15);
-        String content = Util.outContent.toString();
-        Util.cleanUpStreams();
+        String content = Util.getFromStdOut(Shop::shop, 15);
         Assert.assertFalse(" הלקוח הצליח לקנות את הפיצה, למרות שאין לו מספיק כסף (15)", content.contains("pizza"));
     }
 
