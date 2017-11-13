@@ -12,7 +12,7 @@ money
 "You can buy pizza"
 ```
 
-@[בואו נקנה פיצה]({"stubs": ["src/main/java/com/yourself/Shop.java"], "command": "com.yourself.ShopTest#test"})
+@[בואו נקנה פיצה]({"stubs": ["src/main/java/com/yourself/Shop.java"], "command": "com.yourself.ShopTest#testEnough && com.yourself.ShopTest#testNotEnough"})
 
 
 זכרו: הפקודה להדפסה היא
