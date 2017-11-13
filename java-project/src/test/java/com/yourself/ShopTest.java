@@ -23,7 +23,7 @@ public class ShopTest {
         Shop.shop(25);
         String content = Util.outContent.toString();
         Util.cleanUpStreams();
-        Assert.assertTrue("הלקוח לא הצליח לקנות את הבננה, למרות שיש לו מספיק כסף (25)", content.contains("pizza"));
+        Assert.assertTrue("הלקוח לא הצליח לקנות את הפיצה, למרות שיש לו מספיק כסף (25)", content.contains("pizza"));
     }
 
     private void assertNotEnough() throws AssertionError {
