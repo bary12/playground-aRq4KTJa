@@ -16,6 +16,7 @@ public class BetterShopTest {
             Util.msg("שגיאה!", ae.getMessage());
         }
 
+
     }
 
     private void assertEnough() throws AssertionError {
@@ -28,7 +29,6 @@ public class BetterShopTest {
         String content = Util.getFromStdOut(BetterShop::shop, 15);
         Assert.assertTrue("ההודעה \nYou don't have enough money\n לא הודפסה למסך, למרות שאין ללקוח מספיק כסף", content.contains("t have enough money"));
         Assert.assertFalse("הודפסה ההודעה\n You can buy pizza\nכאשר לא היה ללקוח מספיק כסף", content.contains("can buy pizza"));
-
     }
 
 }

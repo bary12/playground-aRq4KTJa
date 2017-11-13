@@ -14,7 +14,7 @@ public class Util {
     public static ByteArrayOutputStream errContent;
     public static final PrintStream stdout = System.out;
     public static final PrintStream stderr = System.err;
-
+    public static final String ErrorChannel = "שגיאה!"; // If you don't want to support Hebrew, change this.
 
     public static void setUpStreams() {
         outContent = new ByteArrayOutputStream();
@@ -50,8 +50,12 @@ public class Util {
     public static void success(boolean success) {
         System.out.println(String.format("TECHIO> success %s", success));
     }
-/*
-    public static void assertTrue(boolean assertion, String message, String channel) throws AssertionError{
+
+    public static void assertTrue(boolean assertion, String message) throws AssertionError {
+        assertTrue(assertion, message, ErrorChannel);
+    }
+
+    public static void assertTrue(boolean assertion, String message, String channel) throws AssertionError {
         try {
             Assert.assertTrue(message, assertion);
         } catch (AssertionError ae) {
@@ -60,5 +64,5 @@ public class Util {
             throw ae;
         }
     }
-    */
+
 }
