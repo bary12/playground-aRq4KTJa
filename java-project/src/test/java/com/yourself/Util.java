@@ -5,13 +5,15 @@ import java.io.PrintStream;
 
 public class Util {
 
-    public static final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
-    public static final ByteArrayOutputStream errContent = new ByteArrayOutputStream();
+    public static ByteArrayOutputStream outContent;
+    public static ByteArrayOutputStream errContent);
     public static final PrintStream stdout = System.out;
     public static final PrintStream stderr = System.err;
 
 
     public static void setUpStreams() {
+        outContent = new ByteArrayOutputStream();
+        errContent = new ByteArrayOutputStream();
         System.setOut(new PrintStream(outContent));
         System.setErr(new PrintStream(errContent));
     }
