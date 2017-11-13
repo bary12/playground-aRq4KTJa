@@ -4,8 +4,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class BetterShopTest {
-
-
+    
     @Test
     public void test(){
         try {
