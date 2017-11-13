@@ -6,7 +6,7 @@ import java.io.PrintStream;
 public class Util {
 
     public static ByteArrayOutputStream outContent;
-    public static ByteArrayOutputStream errContent);
+    public static ByteArrayOutputStream errContent;
     public static final PrintStream stdout = System.out;
     public static final PrintStream stderr = System.err;
 
