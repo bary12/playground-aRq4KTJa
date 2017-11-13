@@ -13,7 +13,6 @@ public class Util {
     public static final PrintStream stdout = System.out;
     public static final PrintStream stderr = System.err;
     public static final String ErrorChannel = "שגיאה!"; // If you don't want to support Hebrew, change this.
-    public static final boolean suppressStderr = true; // Makes it so that TECHIO will not display stderr.
 
     public static void setUpStreams() {
         outContent = new ByteArrayOutputStream();
@@ -24,8 +23,7 @@ public class Util {
 
     public static void cleanUpStreams() {
         System.setOut(stdout);
-        if (!suppressStderr)
-            System.setErr(stderr);
+        System.setErr(stderr);
     }
 
     public static void msg(String channel, String msg) {
@@ -61,7 +59,6 @@ public class Util {
         } catch (AssertionError ae) {
             msg(channel, message);
             success(false);
-            throw ae;
         }
     }
 

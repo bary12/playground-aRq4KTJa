@@ -14,7 +14,7 @@ public class BetterShopTest {
         String content = Util.getFromStdOut(BetterShop::shop, 25);
         Util.assertTrue(content.contains(enough), "ההודעה \nYou can buy pizza \nלא הודפסה למסך, למרות שיש ללקוח מספיק כסף");
         Util.assertTrue(!content.contains(notEnough), "הודפסה ההודעה הלא נכונה");
-        
+
         content = Util.getFromStdOut(BetterShop::shop, 15);
         Util.assertTrue(content.contains(enough), "ההודעה \nYou don't have enough money\n לא הודפסה למסך, למרות שאין ללקוח מספיק כסף");
         Util.assertTrue(!content.contains(notEnough), "הודפסה ההודעה\n You can buy pizza\nכאשר לא היה ללקוח מספיק כסף");
