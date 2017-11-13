@@ -22,7 +22,9 @@ public class Util {
     }
 
     public static void msg(String channel, String msg) {
-        System.out.println(String.format("TECHIO> message --channel \"%s\" \"%s\"", channel, msg));
+        for(String line: msg.split("\n")) {
+            System.out.println(String.format("TECHIO> message --channel \"%s\" \"%s\"", channel, line));
+        }
     }
 
     public static void success(boolean success) {
