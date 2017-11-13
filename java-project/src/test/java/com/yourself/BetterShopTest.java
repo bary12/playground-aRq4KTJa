@@ -32,7 +32,6 @@ public class BetterShopTest {
         BetterShop.shop(15);
         String content = Util.outContent.toString();
         Util.cleanUpStreams();
-        Util.msg("debug", content);
         Assert.assertTrue("ההודעה \nYou don't have enough money\n לא הודפסה למסך, למרות שאין ללקוח מספיק כסף", content.contains("t have enough money"));
         Assert.assertFalse("הודפסה ההודעה\n You can buy pizza\nכאשר לא היה ללקוח מספיק כסף", content.contains("can buy pizza"));
 

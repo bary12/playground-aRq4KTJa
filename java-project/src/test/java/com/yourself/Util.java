@@ -2,6 +2,11 @@ package com.yourself;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
+import java.util.ArrayList;
+import java.util.function.Consumer;
+import java.util.function.Function;
+
+import org.junit.Assert;
 
 public class Util {
 
@@ -29,7 +34,31 @@ public class Util {
         }
     }
 
+    /**
+     *
+     * @param func - The function to activate
+     * @return The output from StdOut
+     */
+    public static String getFromStdOut(Consumer<Integer> func, int arg) {
+        setUpStreams();
+        func.accept(arg);
+        String content = outContent.toString();
+        cleanUpStreams();
+        return content;
+    }
+
     public static void success(boolean success) {
         System.out.println(String.format("TECHIO> success %s", success));
     }
+/*
+    public static void assertTrue(boolean assertion, String message, String channel) throws AssertionError{
+        try {
+            Assert.assertTrue(message, assertion);
+        } catch (AssertionError ae) {
+            msg(channel, message);
+            success(false);
+            throw ae;
+        }
+    }
+    */
 }
