@@ -1,8 +1,8 @@
-title : Java Maven Project
+title : תכנות ב-Java
 
 # Table of content
 plan:
-  - title: Welcome # Set the page title (only displayed if your contribution has several pages)
+  - title: חנות # Set the page title (only displayed if your contribution has several pages)
     statement: markdowns/welcome.md # Set the file path to the page content
   - title: חנות טובה יותר
     statement: markdowns/Lvl2.md

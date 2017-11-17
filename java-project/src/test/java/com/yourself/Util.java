@@ -46,6 +46,8 @@ public class Util {
     }
 
     public static void success(boolean success) {
+        if(success)
+            msg("כל הכבוד!", "התוכנה עובדת כמצופה");
         System.out.println(String.format("TECHIO> success %s", success));
     }
 
